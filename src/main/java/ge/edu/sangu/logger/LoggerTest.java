@@ -4,7 +4,7 @@ public class LoggerTest {
     public static void main(String[] args) {
         Logger logger = new ConsoleLogger("LoggerTest");
 
-        System.out.println("--- Testing logs ---");// ჩვეულებრივ წინადადებებს ვბეჭდავ აქ (successfully logs)
+        System.out.println("--- Testing logs ---");
         logger.info("This is a right message.");
         logger.warn("This is a warning with a parameter: %s", "Check this!");
 
@@ -12,7 +12,7 @@ public class LoggerTest {
         System.out.println("--- Testing exception --");
 
         try {
-            logger.info(null);// გავუშვათ ნალ მესიჯი და ექსეფშენი დავიჭიროთ
+            logger.info(null);
         } catch (IllegalArgumentException exception) {
             System.out.println("Caught exception: " + exception.getMessage());
             System.out.println("Confirmation: Null message exception was handled correctly.");
@@ -21,7 +21,7 @@ public class LoggerTest {
 
 
         try {
-            logger.error("   ");// ცარიელი (გამოტოვებები) სტრინგის გაშვება
+            logger.error("   ");
         } catch (IllegalArgumentException exception) {
             System.out.println("Caught exception: " + exception.getMessage());
             System.out.println("Confirmation: Empty or whitespace message exception was handled correctly.");
