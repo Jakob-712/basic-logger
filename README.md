@@ -1,3 +1,3 @@
-# Basic logger (With Java)
+# Basic logger
 
-Basic loger written in java.
+Basic logger written in java.
